@@ -1,0 +1,1 @@
+KeyFrameType = {StaticPicture = 26}
