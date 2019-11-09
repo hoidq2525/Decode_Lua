@@ -90,7 +90,7 @@ function on_btn_open(btn)
       end
     end
     if not bfind then
-      ui_chat.show_ui_text_id(73286)
+      ui_chat.show_ui_text_id(73286) --[[Trường cảnh này không được treo máy.--]]
       return
     end
     local v = sys.variant()
@@ -102,7 +102,7 @@ function on_btn_open(btn)
     if auto_skill.value == 0 then
       local player_skills = g_cfg_op.player_skills
       if player_skills.value == L("0*0*0*0*0*0") then
-        ui_chat.show_ui_text_id(73283)
+        ui_chat.show_ui_text_id(73283)   --[[ Chưa thiết lập kỹ năng nhân vật sử dụng, không thể mở.--]]
         return
       end
     end
@@ -236,7 +236,7 @@ function on_btn_buy_click()
         end
         local money = ui_supermarket2.g_rmb
         if money < sel.m then
-          ui_chat.show_ui_text_id(72167)
+          ui_chat.show_ui_text_id(72167) --[[Mở ra sau ngẫu nhiên thu được dưới đây vật phẩm:\n<i:70237>\n<i:70143>\n<i:70142>\n<i:80153>.--]]
           break
         end
         ui_widget.ui_msg_box.show_common({
